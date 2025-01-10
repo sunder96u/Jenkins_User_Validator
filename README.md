@@ -4,6 +4,7 @@ This python script checks if a Jenkins user exists by attempting to log in with 
 
 ## Features
 
+- Tested on Jenkins 2.440.3
 - Checks if a Jenkins user exists by accessing their user profile via the Jenkins API.
 - Returns different outcomes based on the status code:
   - **200**: User exists and authentication is successful.
