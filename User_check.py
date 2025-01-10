@@ -5,6 +5,7 @@ from requests.auth import HTTPBasicAuth
 # ANSI escape codes for colored text
 YELLOW = '\033[93m'
 RED = '\033[91m'
+GREEN = '\033[92m'
 RESET = '\033[0m'
 
 def check_user_exists(jenkins_url, username, password):
@@ -55,9 +56,9 @@ if __name__ == "__main__":
         exit(1)
 
     # Iterate over each username and check if it exists
-    print(f"[+] Checking users")
-    print(f"[+] Jenkins Usernames must only contain alphanumeric characters, underscore and dash")
-    print(f"[+] Ensure your list matches")
+    print(f"{GREEN}[+] {RESET}Checking users")
+    print(f"{GREEN}[+] {RESET}Jenkins Usernames must only contain alphanumeric characters, underscore and dash")
+    print(f"{GREEN}[+] {RESET}Ensure your list matches")
     for username in usernames:
         if username:  # Skip empty lines
             user_exists = check_user_exists(args.url, username, args.password)
