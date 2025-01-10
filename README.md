@@ -11,6 +11,10 @@ This python script checks if a Jenkins user exists by attempting to log in with 
   - **403**: User exists but lacks permissions to view their profile.
 - Prints results to the console with user information in color.
 
+## Username File
+
+Jenkins only allows alphanumeric characters, slashes, or dashes in the username
+
 ## Prerequisites
 
 Before running the script, you will need to have Python installed on your system. Additionally, the script requires the `requests` library to interact with the Jenkins API. You can install the required dependencies using:
